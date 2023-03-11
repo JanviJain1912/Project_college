@@ -31,9 +31,18 @@
                   <section>
                     <i class="fa fa-arrow-circle-down navbar-arrow" aria-hidden="true" onclick="toggleMenu()"></i>
                     <ul id="menu">
+                      <%if (status == "ok"){%>
+                      
+                      <li><a href="/profile">profile</a></li>
+                      <li><a href="/logout">logout</a></li>
+
+                      <%}else{%>
                       <li><a href="/">Home</a></li>
                       <li><a href="/login">Login</a></li>
                       <li><a href="/signup">SignUp</a></li>
+                      
+                      <%}%>
+
                     </ul>
                   </section>
                   <h1 class="banner-heading">StressBuster</h1> 

@@ -68,6 +68,8 @@
 const express = require("express");
 const app = express();
 
+const dotenv = require("dotenv").config();
+
 // for db auth
 const db = require("./routes/auth");
 
