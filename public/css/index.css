@@ -6,7 +6,16 @@
     background: url("bg5.jpg") no-repeat center center;
     background-size: cover;
 }
-
+.banner_main_image1{
+  padding-top: 75px;
+  padding-bottom: 50px;
+  text-align: center;
+  color:white;
+  background: url("bg5.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
 .banner-content{
     position: relative;
     padding-top: 6%;
@@ -102,12 +111,12 @@ ul#menu li a {
   box-sizing: border-box;
   user-select: none;
 }
-.bg-img{
+/* .bg-img{
   background: url('bg5.jpg');
   height: 100vh;
   background-size: cover;
   background-position: center;
-}
+} */
 .bg-img:after{
   position: absolute;
   content: '';

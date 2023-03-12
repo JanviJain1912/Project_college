@@ -1,3 +1,8 @@
+function toggleMenu() {
+  let menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+}
+
 // login form and signup form
 
 const pass_field = document.querySelector('.pass-key');
@@ -35,6 +40,7 @@ form.addEventListener("submit" , () => {
           error.style.display = "none"
           success.style.display = "block"
           success.innerText = data.success
+          // window.location.replace('../public/main.html') ;
       }
   });
 });

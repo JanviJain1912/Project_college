@@ -31,13 +31,15 @@
                   <section>
                     <i class="fa fa-arrow-circle-down navbar-arrow" aria-hidden="true" onclick="toggleMenu()"></i>
                     <ul id="menu">
-                      <%if (status == "ok"){%>
+                      <li><a href="/">Home</a></li>
+
+                      <%if (status == "loggedIn"){%>
                       
                       <li><a href="/profile">profile</a></li>
                       <li><a href="/logout">logout</a></li>
 
                       <%}else{%>
-                      <li><a href="/">Home</a></li>
+                     
                       <li><a href="/login">Login</a></li>
                       <li><a href="/signup">SignUp</a></li>
                       
@@ -45,11 +47,24 @@
 
                     </ul>
                   </section>
-                  <h1 class="banner-heading">StressBuster</h1> 
-                    
+
+                  <%if (status == "loggedIn"){%>
+                    <h1 class="banner-heading">welcome <%= user.email%> </h1> 
+                  <%}else{%>
+                    <h1 class="banner-heading">StressBuster</h1> 
+                  <%}%>
+
+                  <%if (status == "loggedIn"){%>
+                    <p class="banner-paragraph">To a young heart everything is fun index page</p>
+                    <img src="https://gifimage.net/wp-content/uploads/2017/10/cartoon-cute-gif-12.gif" alt="funny GIF" class="banner-image">
+
+                  <%}else{%>
 
                     <p class="banner-paragraph">To a young heart everything is fun</p>
                     <img src="https://gifimage.net/wp-content/uploads/2017/10/cartoon-cute-gif-12.gif" alt="funny GIF" class="banner-image">
+
+                  <%}%>
+
                     
                 </div>
             </div>
