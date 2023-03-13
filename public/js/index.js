@@ -20,3 +20,7 @@ const pass_field = document.querySelector('.pass-key');
             showBtn.style.color = "#222";
           }
          });
+
+         document.querySelector('.button-link').addEventListener('click', function() {
+          window.location.href = 'your-link';
+      });

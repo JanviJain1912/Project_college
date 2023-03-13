@@ -24,51 +24,156 @@
     </head>
     <body>
 
-        <div class="banner_main_image">
-
+      <%if (status == "loggedIn"){%>
+            
+        <div class="main_page">
+          <div class="banner_main_image">
             <div class="container">
-                <div class="banner-content">
-                  <section>
-                    <i class="fa fa-arrow-circle-down navbar-arrow" aria-hidden="true" onclick="toggleMenu()"></i>
-                    <ul id="menu">
-                      <li><a href="/">Home</a></li>
 
-                      <%if (status == "loggedIn"){%>
-                      
-                      <li><a href="/profile">profile</a></li>
-                      <li><a href="/logout">logout</a></li>
+              <!-- navbar section -->
 
-                      <%}else{%>
-                     
-                      <li><a href="/login">Login</a></li>
-                      <li><a href="/signup">SignUp</a></li>
-                      
-                      <%}%>
 
-                    </ul>
-                  </section>
-
-                  <%if (status == "loggedIn"){%>
-                    <h1 class="banner-heading">welcome <%= user.email%> </h1> 
-                  <%}else{%>
-                    <h1 class="banner-heading">StressBuster</h1> 
-                  <%}%>
-
-                  <%if (status == "loggedIn"){%>
-                    <p class="banner-paragraph">To a young heart everything is fun index page</p>
-                    <img src="https://gifimage.net/wp-content/uploads/2017/10/cartoon-cute-gif-12.gif" alt="funny GIF" class="banner-image">
-
-                  <%}else{%>
-
-                    <p class="banner-paragraph">To a young heart everything is fun</p>
-                    <img src="https://gifimage.net/wp-content/uploads/2017/10/cartoon-cute-gif-12.gif" alt="funny GIF" class="banner-image">
-
-                  <%}%>
-
+              <div class="banner-content">
+  
+                <section>
+                  <i class="fa fa-arrow-circle-down navbar-arrow" aria-hidden="true" onclick="toggleMenu()"></i>
+                  <ul id="menu">
+                    <li><a href=""><i class="fa fa-angle-double-down" aria-hidden="true"></i> Avtarian</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-down" aria-hidden="true"></i> Emoticon</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-down" aria-hidden="true"></i> Talking To Nina</a></li>
+ 
+                  </ul>
+                  <h3 class=".main_heading">HEY <i class="fa fa-address-book" aria-hidden="true"></i> <%= user.email%> Welcome!!</h4>
                     
+                    <div>
+                      <fieldset>
+                        <button class="button-link" type="submit" id="form-submit-google" class="button">
+                          <a class="link" href="/profile"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></button>
+                      </fieldset>
+                    </div>
+
+                    <div >
+                      <fieldset>
+                        <button class="button-link" type="submit" id="form-submit-google" class="button">
+                          <a class="link" href="/logout"><i class="fa fa-arrow-left" aria-hidden="true"></i> LogOut</a></button>
+                      </fieldset>
+                    </div>
+
+
+                </section>  
+
+              </div>
+             </div> 
+
+
+              <!-- feauture section -->
+              
+              <section class="white-section" id="features">
+
+                <div >
+            
+                  <div class="row">
+                    <div class="feature-box col-lg-4">
+                      <i class="icon fas fa-check-circle fa-4x"></i>
+                      <h3 class="feature-title">Easy to use.</h3>
+                      <p>So easy to use, even your dog could do it.</p>
+                    </div>
+            
+                    <div class="feature-box col-lg-4">
+                      <i class="icon fas fa-bullseye fa-4x"></i>
+                      <h3 class="feature-title">Elite Clientele</h3>
+                      <p>We have all the dogs, the greatest dogs.</p>
+                    </div>
+            
+                    <div class="feature-box col-lg-4">
+                      <i class="icon fas fa-heart fa-4x"></i>
+                      <h3 class="feature-title">Guaranteed to work.</h3>
+                      <p>Find the love of your dog's life or your money back.</p>
+                    </div>
+
+                  </div>
+                
+                
+            
                 </div>
+                
+              </section>
+
+
+              <!-- testimonial section -->
+
+
+              <section class="colored-section" id="testimonials">
+
+                <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+                  <div class="carousel-inner">
+
+                    <div class="carousel-item active container-fluid">
+                      <h2 class="testimonial-text">LET'S TALK TO NINA.</h2>
+                      <img class="testimonial-image" src="tom.gif" alt="dog-profile">
+                      <div class="testimonial-image"></div>
+                      <em>Nina, Talking agent</em>
+                    </div>
+
+                    <div class="carousel-item container-fluid">
+                      <h2 class="testimonial-text">PLAY WITH EXPRESSION</h2>
+                      <img class="emoji" src="emoji.gif" alt="lady-profile">
+                      <em>Emoticon, Sentimental Detection</em>
+                    </div>
+
+                    <div class="carousel-item container-fluid">
+                        <h2 class="testimonial-text">CREATE YOUR OWN AVATAR</h2>
+                        <img class="testimonial-image" src="avtar.jpg" alt="lady-profile">
+                        <em>Avtar, Bitmoji</em>
+                    </div>
+
+                  </div>
+
+                  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+
+                </div>
+            
+              </section>
+                
+                
+                
+              
             </div>
+          </div>
         </div>
+        
+
+      <%}else{%>
+            
+                  <div class="banner_main_image">
+
+                    <div class="container">
+                        <div class="banner-content">
+                          <section>
+                            <i class="fa fa-arrow-circle-down navbar-arrow" aria-hidden="true" onclick="toggleMenu()"></i>
+                            <ul id="menu">
+                              <li><a href="/"><i class="fa fa-h-square" aria-hidden="true"></i> Home</a></li>
+                              <li><a href="/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Login</a></li>
+                              <li><a href="/signup"><i class="fa fa-user-circle" aria-hidden="true"></i> SignUp</a></li>
+                            </ul>
+                          </section>
+                          <h1 class="banner-heading">StressBuster </h1> 
+                            
+        
+                            <p class="banner-paragraph">To a young heart everything is fun.</p>
+                            
+                            <img src="https://gifimage.net/wp-content/uploads/2017/10/cartoon-cute-gif-12.gif" alt="funny GIF" class="banner-image">
+                            
+                        </div>
+                    </div>
+                </div>
+                  
+    <%}%>
 
         <script src="/js/index.js" charset="utf-8"></script>
         
